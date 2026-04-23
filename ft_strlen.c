@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ERRft_strlen.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 17:29:06 by mapointi          #+#    #+#             */
-/*   Updated: 2026/04/21 18:34:48 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/04/23 20:30:18 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t  ft_strlen(const char *src)
     size_t i;
 
     i = 0;
-    while (src)
+    while (src[i])
         i++;
     return (i);
 }
@@ -29,14 +29,14 @@ size_t  ft_strlen(const char *src)
 int main(void)
 {
     printf("Moi\n");
-    printf("%zu\n", ft_strlen("bonjour toi"));
-    printf("%zu\n", ft_strlen(" "));
-    printf("%zu\n", ft_strlen("0]?"));
+    printf("%ld\n", ft_strlen("aa"));
+    printf("%ld\n", ft_strlen(" "));
+    printf("%ld\n", ft_strlen("0]?"));
 
     printf("OG\n");
-    printf("%lu\n", strlen("bonjour toi"));
-    printf("%lu\n", strlen(" "));
-    printf("%lu\n", strlen("0]?"));
+    printf("%ld\n", strlen("bonjour bonjour"));
+    printf("%ld\n", strlen(" "));
+    printf("%ld\n", strlen("0]?"));
 
-    return (0);
+    return (0);  
 }
