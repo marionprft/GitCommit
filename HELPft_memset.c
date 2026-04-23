@@ -15,7 +15,17 @@
 void *ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*oct;
+	int	i;
 
-	oct = (unsigned char *)b;
-	
+	oct = (unsigned char *)b; //conversion temporaire de b pour l'utiliser
+	i = 0;
+
+	while (i < len)
+	{
+		oct[i] = c;
+		i++;
+	}
+
+	return (oct * len);
+
 }
