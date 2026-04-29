@@ -6,19 +6,15 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 17:46:10 by mapointi          #+#    #+#             */
-/*   Updated: 2026/04/24 13:51:07 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/04/29 18:02:39 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stddef.h>
+#include "libft.h"
 
 void *ft_memset(void *b, int c, size_t n)
 {
 	size_t	i;
-	
-	// unsigned char *str;
-
-	// str = (unsigned char) *b;
 	
 	i = 0;
 	while (i < n)
@@ -38,9 +34,6 @@ size_t  ft_strlen(const char *src)
         i++;
     return (i);
 }
-
-#include <stdio.h>
-#include<string.h>
 
 int main(void)
 {

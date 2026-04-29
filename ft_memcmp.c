@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 10:43:18 by mapointi          #+#    #+#             */
-/*   Updated: 2026/04/29 11:01:17 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/04/29 14:14:19 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
     size_t i;
 
     i = 0;
-    while (i <= n);
+    while (i <= n)
     {
         if(((unsigned char *)s1) > ((unsigned char *)s2))
             return (1);
@@ -30,12 +30,12 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 
 int main(void)
 {
-    char *s1[] = bimbim;
-    char *s2[] = bimbim;
-    char *ss1[] = bimbam;
-    char *ss2[] = bimbim;
-    char *sss1[] = bimbim;
-    char *sss2[] = bimbam;
+    char s1[] = "bimbim";
+    char s2[] = "bimbim";
+    char ss1[] = "bimbam";
+    char ss2[] = "bimbim";
+    char sss1[] = "bimbim";
+    char sss2[] = "bimbam";
     size_t n = 6;
     
     printf("Mon memcmp :\n");
