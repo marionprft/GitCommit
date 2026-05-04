@@ -6,34 +6,11 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 14:15:05 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/03 23:06:30 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/04 18:47:54 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// char    *ft_strnstr(const char *big, const char* little, size_t len)
-// {
-//     size_t  i;
-//     size_t  j;
-
-//     i = 0;
-//     if (!big || !little)
-//         return (NULL);
-//     if((char)little[0] == 0)
-//             return ((char *)big);
-    
-//     while(i < len && big[i])
-//     {   
-//         j = 0;
-//         i++;
-        
-//         if (ft_strncmp(&big[i], little, ft_strlen(little)) == 0 && len - i >= ft_strlen(little))
-//                 return ((char * ) big + i);
-             
-//     }     
-//     return (NULL);
-// }
 
 char    *ft_strnstr(const char *big, const char* little, size_t len)
 {

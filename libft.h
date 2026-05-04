@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 18:26:50 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/03 21:03:14 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/04 20:07:37 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+char    *ft_strdup(const char *s);
+char    *ft_strchr(const char *s, int c);
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
