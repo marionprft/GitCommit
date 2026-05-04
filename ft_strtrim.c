@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 18:21:28 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/04 20:08:40 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/04 23:00:33 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char    *front_trim(char const *s1, char const *set)
 {
     size_t i;
     size_t j;
@@ -28,13 +28,37 @@ char *ft_strtrim(char const *s1, char const *set)
         if (set[j] != s1[i])
         {
             j = 0;
-            while (set[j] != s1[i])
+            while (set[j] != s1[i] && set[j])
                 j++;
         }
     }
     s2 = ft_strchr(s1, s1[i]);
     return (s2);
-    
+}
+
+char    *ft_strtrim(char const *s1, char const *set)
+{
+    size_t i;
+    size_t j;
+    char    *s3;
+    char    *s2;
+
+    s2 = front_trim(s1, set);
+    i = ft_strlen(s2) - 1;
+    j = 0;
+    while (i > 0)
+    { 
+        if (set[j] != s2[i])
+        {
+            j = 0;
+            while (set[j] && set[j] != s2[i])
+            j++;
+        }
+        if (set[j] == s2[i])
+            i--;
+    }
+    s3 = (char  *)malloc(sizeof(char) * (i + 1));
+    return (s3);
 }
 
 int main(void)
