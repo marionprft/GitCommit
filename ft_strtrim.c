@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mpf <mpf@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 18:21:28 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/04 23:49:03 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/05 18:53:14 by mpf              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,42 @@
 
 #include "libft.h"
 
-char    *front_trim(char const *s1, char const *set)
+// void     is_set(char const *s1, char const *set)
+// {
+//     size_t  i;
+
+//     i = 0;
+//     j = 0;
+//     while (i < ft_strlen(s1) && set[i]);
+//     {
+//         if (s1[i] = set[j])
+//             i++;
+//         if (s1[i] != set[i])
+//             j++;
+//     }
+    
+// }
+
+
+/*char    *front_trim(char const *s1, char const *set)
 {
     size_t i;
     size_t j;
     char    *s2;
 
     i = 0;
-    j = 0;
-    while (i < ft_strlen(s1) && set[j] == s1[i])
+    while (i < ft_strlen(s1))
     {
+        j = 0;
+        while (set[j] != s1[i] && set[j])
+            j++;
         i++;
-        if (set[j] != s1[i])
-        {
-            j = 0;
-            while (set[j] != s1[i] && set[j])
-                j++;
-        }
     }
     s2 = ft_strchr(s1, s1[i]);
     return (s2);
-}
-
+}gdb ./a.out
+run 
+y
 char    *ft_strtrim(char const *s1, char const *set)
 {
     size_t i;
@@ -62,19 +76,33 @@ char    *ft_strtrim(char const *s1, char const *set)
             //printf("%c\n", set[i]);
         } 
         break;
-    }
+    }*/
+
+    char    *ft_strtrim(char const *s1, char const *set)
+{
+    size_t start;
+    size_t end;
+    char    *s;
+    size_t j;
+    
+    start = 0;
+    while (ft_strchr(set, s1[start]))
+        start++;
+    end = ft_strlen(s1) - 1;
+    while (end > start && ft_strchr(set, s1[end]))
+        end--;
    
-    s3 = (char  *)malloc(sizeof(char) * (i + 1));
-    if (!s3)
+    s = (char  *)malloc(sizeof(char) * (1 + end - start));
+    if (!s)
         return (NULL);
     j = 0;
-    while (j <= i)
+    while (j <= end-start)
     {
-        s3[j] = s2[j];
+        s[j] = s1[start + j];
         j++;
     }
-    s3[j] = 0;
-    return (s3);
+    s[j] = 0;
+    return (s);
 }
 
 int main(void)
@@ -82,7 +110,7 @@ int main(void)
     char    *s1 = "?55]ah bah dakkeur///?55]";
     // char    *s2 = "?55]ah bah dakkeur///?55]boop";
     // char    *s3 = "?55]ah bah dakkeur///?55";
-    char    *set = "?55]";
+    char    *set = "5]?";
 
     printf("%s\n", ft_strtrim(s1, set));
     // printf("%s\n", ft_strtrim(s2, set));
