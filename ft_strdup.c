@@ -23,7 +23,6 @@ char    *ft_strdup(const char *s)
         return (NULL);
     ft_strlcpy(dup, s, n);
         return (dup);
-    
 }
 
 // int     main(void)
