@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 18:26:50 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/08 15:55:34 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/08 21:23:08 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char    *ft_strdup(const char *s);
 char    *ft_strchr(const char *s, int c);
 char    *ft_strrchr(const char *s, int c);
 char    *ft_strtrim(char const *s1, char const *set);
+char    *ft_substr(char const *s, unsigned int start, size_t len);
+
 
 
 char    **ft_split(const char* s, char c);

@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 21:08:34 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/03 23:32:37 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/08 19:24:44 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     unsigned    int i;
     
     i = 0;
-    sub = (char *)malloc(sizeof(char) * len);
+    sub = (char *)malloc(sizeof(char) * len + 1);
     if (!sub)
         return (NULL);
-    while (start <= len && s[start])
+    while (len-- && s[start])
     {
         sub[i] = s[start];
         start++;
@@ -32,18 +32,18 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 
 }
 
-int  main(void)
-{
-    char   *s[] = {ft_substr("le poulet c'est trop bon.", 6, 8),
-                    ft_substr("le poulet c'est trop bon.", 6, 50),
-                    ft_substr("le poulet c'est trop bon.", 6, 0),
-                    ft_substr("", 6, 8)};
-    int i = 0;
+// int  main(void)
+// {
+//     char   *s[] = {ft_substr("le poulet c'est trop bon.", 6, 8),
+//                     ft_substr("le poulet c'est trop bon.", 6, 50),
+//                     ft_substr("le poulet c'est trop bon.", 6, 0),
+//                     ft_substr("", 6, 8)};
+//     int i = 0;
 
-    while (i < 4)
-    {
-        printf("%s\n", s[i]);
-        free(s[i]);
-        i++;
-    }
-}
+//     while (i < 4)
+//     {
+//         printf("%s\n", s[i]);
+//         free(s[i]);
+//         i++;
+//     }
+// }
