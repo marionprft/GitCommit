@@ -6,11 +6,11 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 17:46:10 by mapointi          #+#    #+#             */
-/*   Updated: 2026/04/26 20:04:02 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/08 14:49:49 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <string.h>
+#include "libft.h"
 
 void *ft_memcpy(void *dst, const void *src, size_t n)
 {

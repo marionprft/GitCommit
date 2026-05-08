@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 19:38:18 by mapointi          #+#    #+#             */
-/*   Updated: 2026/04/27 20:24:46 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/08 15:59:48 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,14 @@ char    *ft_strrchr(const char *s, int c)
         return (NULL);
 }
 
-int main(void)
-{
-    char *s = "coucou les musulmans, moi je mange la GLAAACEuh";
-    int c = 's';
+// int main(void)
+// {
+//     char *s = "coucou les musulmans, moi je mange la GLAAACEuh";
+//     int c = 's';
 
-    printf("Mon strrchr :\n");
-    printf("%s\n", ft_strrchr(s, c));
+//     printf("Mon strrchr :\n");
+//     printf("%s\n", ft_strrchr(s, c));
 
-    printf("\nOG :\n");
-    printf("%s\n", strrchr(s, c));
-}
+//     printf("\nOG :\n");
+//     printf("%s\n", strrchr(s, c));
+// }
