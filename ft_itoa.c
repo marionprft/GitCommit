@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 20:03:33 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/08 22:23:22 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/08 22:48:23 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int     nb_char(int n)
     int     nb;
 
     nb = 0;
-    while (n / 10 > 0)
+    while (n > 0)
     {
         nb++;
         n = n / 10;
@@ -52,12 +52,12 @@ char    *ft_itoa(int n)
     {
         str = malloc(sizeof(char) * (nb + 2));
         str[0] = '-';
-        i = nb - 2;
+        i = nb - 1;
     }
     else
     {
         str = malloc(sizeof(char) * (nb + 1)); 
-        i = nb - 1;
+        i = nb;
     }
     if (!str)
         return (NULL);
@@ -73,8 +73,6 @@ char    *ft_itoa(int n)
 
 int main(void)
 {
-    int     n = 463;
-
-    printf("%s\n", ft_itoa(n));
+    printf("%s\n", ft_itoa(65413));
 }
 
