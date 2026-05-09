@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 18:26:50 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/08 21:23:08 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/10 00:47:48 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <fcntl.h>
 
 char    *ft_strdup(const char *s);
 char    *ft_strchr(const char *s, int c);
@@ -42,5 +43,14 @@ size_t  ft_strlcpy(char* dst, const char* src, size_t size);
 
 void *ft_memset(void *b, int c, size_t n);
 void    ft_bzero(void *s, size_t n);
+
+typedef struct      s_list
+{
+    void            *content;
+    struct s_list   *next;
+}                   t_list;  
+
+typedef int number;
+
 
 #endif

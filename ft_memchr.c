@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 21:10:31 by mapointi          #+#    #+#             */
-/*   Updated: 2026/04/29 10:42:49 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/09 21:14:34 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,7 @@ void    *ft_memchr(const void *s, int c, size_t n)
     {
         if (mem[i] == c)
         {
-            return (mem + i);
-            // on retourne tout a partir de l`adresse en i.
-        }        
+            return (mem + i);        }        
         i++;
     }
     return (NULL);

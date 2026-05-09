@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 17:15:01 by mapointi          #+#    #+#             */
-/*   Updated: 2026/04/29 17:48:48 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/09 20:54:24 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int ft_atoi(const char *s)
 }
 int main(void)
 {
-    char s[] = "5643";
+    char s[] = "\a5643";
     char ss[] = "/bbe";
     char sss[] = " ";
     
@@ -47,8 +47,8 @@ int main(void)
     printf("%d\n", ft_atoi(ss));
     printf("%d\n", ft_atoi(sss));
 
-    /*printf("\nOG :\n");
+    printf("\nOG :\n");
     printf("%d\n", atoi(s));
     printf("%d\n", atoi(ss));
-    printf("%d\n", atoi(sss));*/
+    printf("%d\n", atoi(sss));
 }

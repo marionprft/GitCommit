@@ -2,7 +2,7 @@
 
 NAME = libft
 CC = gcc
-FLAGS = -Wall -Wextra -Werror -lm
+FLAGS = -Wall -Wextra -Werror
 
 
 # FICHIERS CONCERNÉS

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 18:21:28 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/08 21:17:05 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/09 21:39:38 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t     nb_c(const char* s, char c)
+static size_t     nb_c(const char* s, char c)
 {
     size_t  i;
     size_t  j;
@@ -57,17 +57,17 @@ char    **ft_split(const char* s, char c)
     return (tab);
 }
 
-// int main(void)
-// {
-//     char    s[] = "ah le gateau ilhjgj";
-//     char    c = ' ';
-//     int     i = 0;
-//     char **tab = ft_split(s, c);
+ int main(void)
+ {
+     char    s[] = "ccc";
+     char    c = 'c';
+     int     i = 0;
+     char **tab = ft_split(s, c);
 
-//     //(void)tab;
-//     while (i < 4)
-//     {
-//         printf("%s\n", tab[i]);
-//         i++;
-//     }
-// }
+     (void)tab;
+     while (tab[i])
+     {
+         printf("%s\n", tab[i]);
+         i++;
+     }
+ }
