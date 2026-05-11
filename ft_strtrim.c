@@ -3,52 +3,51 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 18:21:28 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/08 14:50:33 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/11 18:42:53 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//Tronque set en debut et fin de s1.
+// Tronque set en debut et fin de s1.
 
 #include "libft.h"
 
-char    *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-    size_t start;
-    size_t end;
-    char    *s;
-    size_t j;
-    
-    start = 0;
-    while (ft_strchr(set, s1[start]))
-        start++;
-    end = ft_strlen(s1) - 1;
-    while (end > start && ft_strchr(set, s1[end]))
-        end--;
-   
-    s = (char  *)malloc(sizeof(char) * (1 + end - start));
-    if (!s)
-        return (NULL);
-    j = 0;
-    while (j <= end-start)
-    {
-        s[j] = s1[start + j];
-        j++;
-    }
-    s[j] = 0;
-    return (s);
+	size_t	start;
+	size_t	end;
+	char	*s;
+	size_t	j;
+
+	start = 0;
+	while (ft_strchr(set, s1[start]))
+		start++;
+	end = ft_strlen(s1) - 1;
+	while (end > start && ft_strchr(set, s1[end]))
+		end--;
+	s = (char *)malloc(sizeof(char) * (1 + end - start));
+	if (!s)
+		return (NULL);
+	j = 0;
+	while (j <= end - start)
+	{
+		s[j] = s1[start + j];
+		j++;
+	}
+	s[j] = 0;
+	return (s);
 }
 
-int main(void)
+int	main(void)
 {
-    char    *s1 = "?55]ah bah dakkeur///?55]";
-    char    *s2 = "?55]ah bah dakkeur///?55]boop";
-    char    *s3 = "?55]ah bah dakkeur///?55???5";
-    char    *set = "5]?";
+	char *s1 = "?55]ah bah dakkeur///?55]";
+	char *s2 = "?55]ah bah dakkeur///?55]boop";
+	char *s3 = "?55]ah bah dakkeur///?55???5";
+	char *set = "5]?";
 
-    printf("%s\n", ft_strtrim(s1, set));
-    printf("%s\n", ft_strtrim(s2, set));
-    printf("%s\n", ft_strtrim(s3, set));
+	printf("%s\n", ft_strtrim(s1, set));
+	printf("%s\n", ft_strtrim(s2, set));
+	printf("%s\n", ft_strtrim(s3, set));
 }
