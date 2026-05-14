@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: mpf <mpf@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 19:10:48 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/12 20:06:25 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/15 00:51:01 by mpf              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,37 +14,32 @@
 
 void ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int	i;
+	t_list	*p = *lst;
 
-	i = 0;
-	while (i< ft_lstsize(*lst) - 1)
+	if (lst == NULL)
+		return;
+	while (p->next != NULL )
 	{
-		lst = lst->next;
-		i++;
+		p = p->next;
 	}
-	lst = new->next;
+	p->next = new;
 }
 
 int	main(void)
 {
-	t_list **lst = malloc(sizeof(t_list *));
-	if (!lst)
-		return (0);
-	t_list *new = malloc(sizeof(t_list));
-	if (!new)
-		return (0);
+	t_list *lst = NULL;
+	t_list *node1 = malloc(sizeof(t_list));
+	t_list *node2 = malloc(sizeof(t_list));
 
-	char *tab1[] = {"Hello ", "blue ", "world "};
-	char tab2 = "!";
-	int	i = 0;
-	
-	t_list **head = lst; 
-	while (i < 4)
-	{
-		lst->content = tab1[i];
-		printf("%s", tab);
-		lst = lst->next;
-		i++;
-	}
-	printf("%s" ft_lstadd_back(head, new)->content);
+	node1->content = "Hello ";
+	node2->content = "World ";
+
+	t_list *new = malloc(sizeof(t_list));
+	new->content = "!";
+
+	lst = node1;
+	node1->next = node2;
+
+	ft_lstadd_back(&lst, new);
+	printf("%s", (char *)lst->content);
 }
