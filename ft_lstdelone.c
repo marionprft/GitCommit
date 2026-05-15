@@ -1,35 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/10 16:36:25 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/15 16:43:56 by mapointi         ###   ########.fr       */
+/*   Created: 2026/05/15 14:38:01 by mapointi          #+#    #+#             */
+/*   Updated: 2026/05/15 17:31:12 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void ft_lstdelone(t_list *lst, void(*del)(void *))
 {
-	t_list	*newnode;
-
-	newnode = malloc(sizeof(t_list));
-	if (!newnode)
-		return (NULL);
-	newnode->content = content;
-	newnode->next = NULL;
-	return (newnode);
+	del(&lst->content);
+	free(lst);
 }
-
 int	main(void)
 {
-	t_list *a;
-	char *s = "42";
-	a = ft_lstnew((char *)s);
-	printf("Content : %s\n", (char *)a->content);
-	printf("Adresse prochain node : %p\n", a->next);
-	return (0);
+	t_list *node;
+	
+	node = malloc(sizeof(t_list));
+	node->content = "Hello ";
+	node->next = NULL;
+
+	printf("Node : %s/n", node->content);
+	ft_lstdelone(node, free);
+	printf("Del success: %s/n", node->content);
+	
+
+
+	
+
+	
+
+	
 }
+
+
+
