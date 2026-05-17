@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 15:30:16 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/11 18:26:40 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/17 23:36:35 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,10 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     tab[i] = 0;
     return (tab);
 }
+/*
 int main(void)
 {
     printf("%s\n", ft_strmapi("Bonjour", f));
     return 0;
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: mpf <mpf@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 19:10:48 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/15 14:33:47 by mpf              ###   ########.fr       */
+/*   Updated: 2026/05/17 23:22:54 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 	}
 	p->next = new;
 }
-
+/*
 int	main(void)
 {
 	t_list *lst = NULL;
@@ -49,3 +49,4 @@ int	main(void)
 		mobile = mobile->next;
 	}
 }
+*/

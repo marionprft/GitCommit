@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/10 21:03:47 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/11 23:24:16 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/17 23:23:40 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new) // l'sdresse d'un t_list*
 }
 
 #include <stdio.h>
-
+/*
 int	main(void)
 {
 	t_list	*lst;
@@ -51,7 +51,7 @@ int	main(void)
 		lst = lst->next;
 	}
 }
-
+*/
 //     char *s = "hello";
 //     f(&s);
 

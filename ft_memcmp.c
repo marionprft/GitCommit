@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 10:43:18 by mapointi          #+#    #+#             */
-/*   Updated: 2026/04/29 14:14:19 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/17 23:28:34 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
     }
     return (0);
 }
-
+/*
 int main(void)
 {
     char s1[] = "bimbim";
@@ -48,3 +48,4 @@ int main(void)
     printf("%d\n", ft_memcmp(ss1, ss2, n));
     printf("%d\n", ft_memcmp(sss1, sss2, n));
 }
+*/

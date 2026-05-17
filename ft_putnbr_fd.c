@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 20:05:47 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/09 20:25:18 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/17 23:29:27 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void ft_putnbr_fd(int n, int fd)
     write(fd, &c, 1);
 }
 
-
+/*
 int main(void)
 {
     int fd = open("testnbr.txt", O_RDWR | O_CREAT | O_TRUNC, 0600);
@@ -37,3 +37,4 @@ int main(void)
 
     ft_putnbr_fd(n, fd);
 }
+*/

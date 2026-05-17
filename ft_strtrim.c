@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 18:21:28 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/11 18:42:53 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/17 23:36:44 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	s[j] = 0;
 	return (s);
 }
-
+/*
 int	main(void)
 {
 	char *s1 = "?55]ah bah dakkeur///?55]";
@@ -51,3 +51,4 @@ int	main(void)
 	printf("%s\n", ft_strtrim(s2, set));
 	printf("%s\n", ft_strtrim(s3, set));
 }
+*/

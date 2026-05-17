@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 20:00:48 by mapointi          #+#    #+#             */
-/*   Updated: 2026/04/26 21:24:28 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/17 23:36:11 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ size_t  ft_strlcat(char *dst, const char *src, size_t size)
 #include <stdio.h>
 
 #define SIZE 50
-
+/*
 int main(void)
 {
     char d[SIZE] = "michael";
@@ -55,3 +55,4 @@ int main(void)
     printf("%s\n", d);
     
 }
+*/

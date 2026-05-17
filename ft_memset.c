@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 17:46:10 by mapointi          #+#    #+#             */
-/*   Updated: 2026/04/30 23:30:29 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/17 23:29:01 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ size_t	ft_strlen(const char *src)
 		i++;
 	return (i);
 }
-
+/*
 int	main(void)
 {
 	// test 1
@@ -86,3 +86,4 @@ int	main(void)
 
 	return (0);
 }
+*/

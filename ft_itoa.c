@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 20:03:33 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/09 21:11:22 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/17 23:22:47 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,10 @@ char    *ft_itoa(int n)
     str[nb_char(n) + 1] = 0;
     return (str);
 }
-
+/*
 int main(void)
 {
     printf("Res: %s\n", ft_itoa(-2147483648));
     return 0;
 }
-
+*/

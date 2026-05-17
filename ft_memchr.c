@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 21:10:31 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/09 21:14:34 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/17 23:27:32 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void    *ft_memchr(const void *s, int c, size_t n)
     }
     return (NULL);
 }
-
+/*
 int main(void)
 {
     const char s[] = "techno, toujours pareil, boom boom dans les oreilles";
@@ -45,3 +45,4 @@ int main(void)
     printf("\nOG :\n");
     printf("%s\n", (char *)memchr(ss, cc, nn));
 }
+*/

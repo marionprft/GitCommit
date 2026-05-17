@@ -6,7 +6,7 @@
 /*   By: mpf <mpf@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 18:33:36 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/17 22:14:12 by mpf              ###   ########.fr       */
+/*   Updated: 2026/05/17 23:51:50 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,21 @@
 
 void *f(void *content) 
 {
-	ft_substr((char *)content, 0, 2);
-	return (content);
+	char *new;
+	
+	new = ft_substr((char *)content, 0, 2);
+	return (new);
 }
 
 t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*newnode;
 	t_list	*head;
+	t_list  *lst_head;
 
 	newnode = ft_lstnew(f(lst->content));
 	head = newnode;
+	lst_head = lst;
 	lst = lst->next;
 	while(lst != 0)
 	{
@@ -33,9 +37,10 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		newnode = newnode->next;
 	}
 	newnode->next = 0;	
+	ft_lstclear(&lst_head, del);
 	return(head);
 }
-
+/*
 int main(void)
 {
 	t_list *n1 = malloc(sizeof(t_list));
@@ -60,3 +65,4 @@ int main(void)
 		res = res->next;
 	}
 }
+*/

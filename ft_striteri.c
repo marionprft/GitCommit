@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 15:58:19 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/09 17:39:39 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/17 23:35:56 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
     write(1, "\n", 1);
 
 }
-
+/*
 int main(void)
 {
     char s[] = "je reviens apres";
@@ -39,3 +39,4 @@ int main(void)
     ft_striteri(s, f);
     return (0);
 }
+*/

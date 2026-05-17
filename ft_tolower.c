@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 22:57:38 by mapointi          #+#    #+#             */
-/*   Updated: 2026/04/26 23:02:46 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/17 23:36:48 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int ft_tolower(int c)
     return (c);
 }
 #include <stdio.h>
-
+/*
 int main(void)
 {
     int c = 40;
@@ -46,3 +46,4 @@ int main(void)
     printf("%c\n", tolower(ccc));
 
 }
+*/

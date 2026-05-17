@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 17:15:01 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/09 20:54:24 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/17 23:21:26 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int ft_atoi(const char *s)
         i++;
     }
     return (n * sign);
-}
+}/*
 int main(void)
 {
     char s[] = "\a5643";
@@ -52,3 +52,4 @@ int main(void)
     printf("%d\n", atoi(ss));
     printf("%d\n", atoi(sss));
 }
+*/

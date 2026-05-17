@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 18:33:36 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/12 19:09:11 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/17 23:25:17 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_list *ft_lstlast(t_list *lst)
 	}
 	return (lst);
 }
-
+/*
 int	main(void)
 {
 	t_list	*lst = malloc(sizeof(t_list));
@@ -43,3 +43,4 @@ int	main(void)
 	}
 	printf("Dernier node = %s", ft_lstlast(head)->content);
 }
+*/

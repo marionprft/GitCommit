@@ -6,7 +6,7 @@
 /*   By: mpf <mpf@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 18:33:36 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/16 22:55:30 by mpf              ###   ########.fr       */
+/*   Updated: 2026/05/17 23:25:05 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void ft_lstiter(t_list *lst, void (*f)(void *))
 	}
 	lst = NULL;
 }
-
+/*
 int main(void)
 {
 	t_list *n1 = malloc(sizeof(t_list));
@@ -53,3 +53,4 @@ int main(void)
 	ft_lstiter(n1, print_content);
 	ft_lstclear(&n1, free);
 }
+*/

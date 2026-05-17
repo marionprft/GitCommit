@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 23:33:32 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/04 16:18:15 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/17 23:36:02 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char    *ft_strjoin(char const *s1, char const *s2)
     s[i + 1] = 0;
     return (s);
 }
-
+/*
 int main(void)
 {
     char    *s1 = "je suis";
@@ -47,3 +47,4 @@ int main(void)
 
     printf("%s\n", ft_strjoin(s1, s2));    
 }
+*/

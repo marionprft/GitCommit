@@ -6,7 +6,7 @@
 /*   By: mpf <mpf@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 17:49:54 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/03 18:15:37 by mpf              ###   ########.fr       */
+/*   Updated: 2026/05/17 23:21:51 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void    *ft_calloc(size_t elmt, size_t size)
     ft_bzero(mem, size * elmt);
     return (mem);
 }
-
+/*
 int main(void)
 {   
     int tests[][2] = {{5, 1}, {3, 4}, {0, 1}, {5, 0}, {2147483647, 99999999}, {0, 0}};
@@ -49,7 +49,7 @@ int main(void)
         i++;
     }
 
-    /*printf("%p\n", (int *)ft_calloc(3, 4));
+    printf("%p\n", (int *)ft_calloc(3, 4));
     printf("%p\n", (int *)ft_calloc(0, 1));
     printf("%p\n", (int *)ft_calloc(5, 0));
     printf("%p\n", (int *)ft_calloc(2147483648, 99999999));
@@ -61,6 +61,7 @@ int main(void)
     printf("%p\n", calloc(0, 1));
     printf("%p\n", calloc(5, 0));
     printf("%p\n", calloc(2147483648, 4));
-    printf("%p\n", calloc(0, 0));*/
+    printf("%p\n", calloc(0, 0));
 
 }
+*/

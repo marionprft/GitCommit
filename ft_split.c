@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 18:21:28 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/09 21:39:38 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/17 23:34:24 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char    **ft_split(const char* s, char c)
     }
     return (tab);
 }
-
+/*
  int main(void)
  {
      char    s[] = "ccc";
@@ -71,3 +71,4 @@ char    **ft_split(const char* s, char c)
          i++;
      }
  }
+*/

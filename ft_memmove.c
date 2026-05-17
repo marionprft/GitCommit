@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 18:02:39 by mapointi          #+#    #+#             */
-/*   Updated: 2026/04/24 19:05:11 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/17 23:28:45 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void    *ft_memmove(void *dst, const void *src, size_t n)
 }
 
 #include<stdio.h>
-
+/*
 int main(void)
 {
     char dst[60] = "";
@@ -52,3 +52,4 @@ int main(void)
     printf("\nOG :\n");
     printf("%s\n", (unsigned char *)memmove(dst, src, n));
 }
+*/

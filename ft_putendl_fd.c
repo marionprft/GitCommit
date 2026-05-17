@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 19:46:53 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/09 20:04:35 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/17 23:29:24 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void ft_putendl_fd(char *s, int fd)
     write(fd, s, ft_strlen(s));
     write(fd, "\n", 1);     
 }
-
+/*
 int main(void)
 {
     int fd = open("test.txxxt", O_RDWR | O_CREAT, 0600);
@@ -26,4 +26,4 @@ int main(void)
     ft_putendl_fd(s, fd);
     return(0);
 }
-
+*/
