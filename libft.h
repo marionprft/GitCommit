@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: mpf <mpf@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 18:26:50 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/12 18:57:30 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/16 23:40:32 by mpf              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,19 @@ int	ft_isascii(int c);
 int	ft_isprint(int c);
 int ft_strncmp(const char *s1, const char *s2, size_t n);
 int	ft_lstsize(t_list *lst);
+int ft_toupper(int c);
+
 
 size_t  ft_strlen(const char *src);
 size_t  ft_strlcpy(char* dst, const char* src, size_t size);
 
 void *ft_memset(void *b, int c, size_t n);
 void    ft_bzero(void *s, size_t n);
+void ft_lstclear(t_list **lst, void (*del)(void *));
+
+t_list	*ft_lstnew(void *content);
+
+
 
 
 
