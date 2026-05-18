@@ -6,19 +6,18 @@
 /*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/10 21:03:47 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/17 23:23:40 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/18 21:58:22 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new) // l'sdresse d'un t_list*
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;
 	*lst = new;
 }
 
-#include <stdio.h>
 /*
 int	main(void)
 {
@@ -44,8 +43,7 @@ int	main(void)
 	copy_lst->next = 0;
 	new->content = "bai bai";
 	ft_lstadd_front(&lst, new);
-	
-    while (lst != 0)
+	while (lst != 0)
 	{
 		printf("%s\n", (char *)(lst->content));
 		lst = lst->next;

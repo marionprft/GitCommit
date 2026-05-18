@@ -3,40 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 15:58:19 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/17 23:35:56 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/18 20:38:00 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    f(unsigned int i, char *c)
-{  
-    *c += 1;
-}
-
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	f(unsigned int i, char *c)
 {
-    unsigned    int i;
-
-    i = 0;
-    while (i < ft_strlen(s))
-    {
-        f(i, &s[i]);
-        i++;
-    }
-    write(1, s, ft_strlen(s));
-    write(1, "\n", 1);
-
+	c[i] += 1;
 }
-/*
-int main(void)
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-    char s[] = "je reviens apres";
-    
-    ft_striteri(s, f);
-    return (0);
+	unsigned int	i;
+
+	i = 0;
+	while (i < ft_strlen(s))
+	{
+		f(i, &s[i]);
+		i++;
+	}
+	write(1, s, ft_strlen(s));
+	write(1, "\n", 1);
 }
-*/
+
+int	main(void)
+{
+	char	s[] = "je reviens apres";
+
+	ft_striteri(s, f);
+	return (0);
+}
+

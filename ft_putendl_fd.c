@@ -3,27 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 19:46:53 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/17 23:29:24 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/18 19:30:51 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-    write(fd, s, ft_strlen(s));
-    write(fd, "\n", 1);     
+	write(fd, s, ft_strlen(s));
+	write(fd, "\n", 1);
 }
 /*
-int main(void)
+int	main(void)
 {
-    int fd = open("test.txxxt", O_RDWR | O_CREAT, 0600);
-    char    s[] = "IL FAUT TESTER SON CODE JULIEEEEEEN";
+	int		fd;
+	char	s[] = "IL FAUT TESTER SON CODE JULIEEEEEEN";
 
-    ft_putendl_fd(s, fd);
-    return(0);
+	fd = open("test.txxxt", O_RDWR | O_CREAT, 0600);
+	ft_putendl_fd(s, fd);
+	return(0);
 }
 */

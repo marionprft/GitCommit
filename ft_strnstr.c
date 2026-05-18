@@ -3,41 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 14:15:05 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/04 18:47:54 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/18 19:40:58 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strnstr(const char *big, const char* little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-    size_t  i;
-    size_t  j;
+	size_t	i;
+	size_t	j;
 
-    i = 0;
-    if(little == NULL)
-        return (NULL);
-    if(little[0] == 0)    
-            return ((char *)big);
-    while(i < len && big[i])
-    {   
-        j = 0;
-        while(little[j] == big[i + j] && big[i + j] && (i + j) < len)
-        {      
-            j++;
-        }  
-        if (little[j] == 0)
-            return ((char *)big + i);
-        i++;   
-    }
-        
-    return (NULL);
+	i = 0;
+	if (little == NULL)
+		return (NULL);
+	if (little[0] == 0)
+		return ((char *)big);
+	while (i < len && big[i])
+	{
+		j = 0;
+		while (little[j] == big[i + j] && big[i + j] && (i + j) < len)
+		{
+			j++;
+		}
+		if (little[j] == 0)
+			return ((char *)big + i);
+		i++;
+	}
+	return (NULL);
 }
 
-// int main() 
+// int main()
 // {
 //     char big[] = "j'ai faim d'un burger!!";
 //     char la[] = "faim";
@@ -45,7 +44,6 @@ char    *ft_strnstr(const char *big, const char* little, size_t len)
 //     char pas_laa[] = "";
 //     char *pas_laaa = 0;
 
-    
 //     printf("Mon strnstr :\n");
 //     printf("%s\n",  ft_strnstr(big, la, 15));
 //     printf("%s\n",  ft_strnstr(big, la, 7));
@@ -53,7 +51,7 @@ char    *ft_strnstr(const char *big, const char* little, size_t len)
 //     printf("%s\n",  ft_strnstr(big, pas_la, 18));
 //     printf("%s\n",  ft_strnstr(big, pas_laa, 5));
 //     printf("%s\n",  ft_strnstr(big, pas_laaa, 5));
-    
+
 //     printf("\nOG :\n");
 //     printf("%s\n",  strnstr(big, la, 15));
 //     printf("%s\n",  strnstr(big, la, 7));

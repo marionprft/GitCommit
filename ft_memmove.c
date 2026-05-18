@@ -3,53 +3,55 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 18:02:39 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/17 23:28:45 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/18 22:41:48 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<string.h>
+#include <string.h>
 
-void    *ft_memmove(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-    unsigned char *d = (unsigned char *)dst;
-    unsigned char *s = (unsigned char *)src;
-    size_t i;
+	unsigned char	*d;
+	unsigned char	*s;
+	size_t			i;
 
-    i = n - 1;
-    if(d > s)
-    {
-        while(i != 0)
-        {
-            d[i] = s[i];
-            i--;
-        }
-    }
-    else
-    {
-        while(i < n)
-        {
-            d[i] = s[i];
-            i++;
-        }
-    }
-    return (d);
+	d = (unsigned char *)dst;
+	s = (unsigned char *)src;
+	i = n - 1;
+	if (d > s)
+	{
+		while (i != 0)
+		{
+			d[i] = s[i];
+			i--;
+		}
+	}
+	else
+	{
+		i = 0;
+		while (i < n)
+		{
+			d[i] = s[i];
+			i++;
+		}
+	}
+	return (d);
 }
 
-#include<stdio.h>
 /*
-int main(void)
+int	main(void)
 {
-    char dst[60] = "";
-    char src[] = "totallyspies";
-    size_t n = 4;
-    
-    printf("Mon memmove :\n");
-    printf("%s\n", (unsigned char *)ft_memmove(dst, src, n));
+	char	dst[60] = "";
+	char	src[] = "totallyspies";
+	size_t	n;
 
-    printf("\nOG :\n");
-    printf("%s\n", (unsigned char *)memmove(dst, src, n));
+	n = 4;
+	printf("Mon memmove :\n");
+	printf("%s\n", (unsigned char *)ft_memmove(dst, src, n));
+	printf("\nOG :\n");
+	printf("%s\n", (unsigned char *)memmove(dst, src, n));
 }
 */

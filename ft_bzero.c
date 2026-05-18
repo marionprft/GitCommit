@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpf <mpf@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 17:46:10 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/03 14:23:25 by mpf              ###   ########.fr       */
+/*   Updated: 2026/05/18 19:24:55 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	ft_bzero(void *s, size_t n)
 		((unsigned char *)s)[i] = 0;
 		i++;
 	}
-	
 }
 
 /*int	main(void)

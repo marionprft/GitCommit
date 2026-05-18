@@ -3,29 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 19:38:18 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/08 15:59:48 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/18 19:41:04 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-    int i;
+	int	i;
 
-    i = ft_strlen(s) - 1;
-    while (i >= 0)
-    {
-        if (s[i] == c)
-        {
-            return ((char *)(&s[i]));
-        }
-        i--;
-    }
-        return (NULL);
+	i = ft_strlen(s) - 1;
+	while (i >= 0)
+	{
+		if (s[i] == c)
+		{
+			return ((char *)(&s[i]));
+		}
+		i--;
+	}
+	return (NULL);
 }
 
 // int main(void)

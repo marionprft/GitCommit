@@ -6,17 +6,17 @@
 /*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 18:33:36 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/17 23:25:17 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/18 19:26:54 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	int	i;
 
-	i = 0;	
+	i = 0;
 	while (i <= ft_lstsize(lst))
 	{
 		lst = lst->next;
@@ -27,13 +27,16 @@ t_list *ft_lstlast(t_list *lst)
 /*
 int	main(void)
 {
-	t_list	*lst = malloc(sizeof(t_list));
+	t_list	*lst;
+	int		i;
+	t_list	*head;
+
+	lst = malloc(sizeof(t_list));
 	if (!lst)
 		return (0);
 	char *tab[] ={"annie", "are", "you", "ok", "?"};
-	int	i = 0;
-	t_list	*head = lst;
-	
+	i = 0;
+	head = lst;
 	while (i < 5)
 	{
 		lst->content = tab[i];
