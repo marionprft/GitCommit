@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 23:04:04 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/18 19:38:43 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/19 20:11:54 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,24 +21,26 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == (unsigned char)c)
 		{
 			return ((char *)&(s[i]));
 		}
-		i++;
+		i++; 
 	}
+	if (c == '\0')
+		return ((char *)s + i);
 	return (NULL);
 }
-// int main(void)
-// {
-//     int c = 'p';
-//     char s[] = "nsopgivnw[peg;sbWEFB]";
+/* int main(void)
+{
+    //int c = 'p';
+    char s[] = "nsopgivnw[peg;sbWEFB]";
 
-//     printf("Mon strchr :\n");
-//     printf("%s\n", ft_strchr(s, c));
+    printf("Mon strchr :\n");
+    printf("%s\n", ft_strchr(s, 0));
 
-//     char s1[] = "nsopgivnw[peg;sbWEFB]";
-//     printf("\nOG :\n");
-//     printf("%s\n", strchr(s1, c));
+    char s1[] = "nsopgivnw[peg;sbWEFB]";
+    printf("\nOG :\n");
+    printf("%s\n", strchr(s1, 0));
 
-// }
+} */

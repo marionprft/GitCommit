@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 21:10:31 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/18 19:27:11 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/19 18:38:06 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (mem[i] == c)
+		if (mem[i] == (char)c)
 		{
-			return (mem + i);
+			return (mem + i);																	
 		}
 		i++;
 	}

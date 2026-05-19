@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 20:00:48 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/18 19:39:40 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/19 21:11:41 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,27 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	i;
-	size_t	j;
+	size_t		i;
+	size_t		j;
+	char		*d;
 
+	d = dst;
 	i = 0;
+	if (size <= ft_strlen((const char *)dst))
+		return (size + ft_strlen(src));
 	while (dst[i])
 	{
 		i++;
 	}
 	j = 0;
-	while (src[j])
+	while (src[j] && size - 1 > i)
 	{
 		dst[i] = src[j];
 		i++;
 		j++;
 	}
-	dst[size] = 0;
-	return (ft_strlen(dst) + ft_strlen(src));
+	dst[i] = 0;
+	return (ft_strlen((const char *)d) + ft_strlen(src));
 }
 
 #define SIZE 50

@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 19:38:18 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/18 19:41:04 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/19 20:24:56 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@ char	*ft_strrchr(const char *s, int c)
 	int	i;
 
 	i = ft_strlen(s) - 1;
+	if (c == 0)
+		return((char *)s + ft_strlen(s));
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == (unsigned char)c)
 		{
 			return ((char *)(&s[i]));
 		}
