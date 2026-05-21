@@ -6,17 +6,17 @@
 /*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 15:30:16 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/18 19:40:10 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/21 12:24:09 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	f(unsigned int i, char g)
-{
-	g += i;
-	return (g);
-}
+// char	f(unsigned int i, char g)
+// {
+// 	g += i;
+// 	return (g);
+// }
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

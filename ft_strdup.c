@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 18:30:34 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/18 19:38:48 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/21 15:29:21 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,23 +18,22 @@ char	*ft_strdup(const char *s)
 	char	*dup;
 
 	n = ft_strlen(s);
-	dup = (char *)malloc(sizeof(char) * n);
+	dup = (char *)malloc(sizeof(char) * (n + 1));
 	if (!dup)
 		return (NULL);
-	ft_strlcpy(dup, s, n);
+	ft_strlcpy(dup, s, (n + 1));
 	return (dup);
 }
-
 // int     main(void)
 // {
-//     char    s[] = "Hello world!";
+//     char    s[] = "123poi";
 //     char *test = ft_strdup(s);
 
 //     printf("Mon strdup :\n");
 //     printf("%s\n", test);
 //     free(test);
 
-//     char    ss[] = "Hello world!";
+//     char    ss[] = "123poi";
 //     char *testt = ft_strdup(ss);
 
 //     printf("\nOG :\n");

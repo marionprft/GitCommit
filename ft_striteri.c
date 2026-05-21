@@ -6,16 +6,16 @@
 /*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 15:58:19 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/18 20:38:00 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/21 12:24:28 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	f(unsigned int i, char *c)
-{
-	c[i] += 1;
-}
+// void	f(unsigned int i, char *c)
+// {
+// 	c[i] += 1;
+// }
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
@@ -31,11 +31,11 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	write(1, "\n", 1);
 }
 
-int	main(void)
-{
-	char	s[] = "je reviens apres";
+// int	main(void)
+// {
+// 	char	s[] = "je reviens apres";
 
-	ft_striteri(s, f);
-	return (0);
-}
+// 	ft_striteri(s, f);
+// 	return (0);
+// }
 
