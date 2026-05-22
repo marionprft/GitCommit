@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 17:29:06 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/21 16:06:41 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/22 15:43:24 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlen(const char *src)
 	size_t	i;
 
 	i = 0;
-	while (src[i])
+	while (src && src[i])
 		i++;
 	return (i);
 }

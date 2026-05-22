@@ -6,7 +6,7 @@
 /*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 15:58:19 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/21 12:24:28 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/22 18:21:48 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 // 	ft_striteri(s, f);
 // 	return (0);
 // }
-
