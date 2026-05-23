@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: mapointi <marion.pointier-fourcart@lear    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 22:26:09 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/12 18:58:12 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/23 15:13:31 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_lstsize(t_list *lst)
 	int	i;
 
 	i = 0;
+	if (lst == NULL)
+		return (0);
 	while (lst != 0)
 	{
 		lst = lst->next;
@@ -31,11 +33,11 @@ int	ft_lstsize(t_list *lst)
 // 	if (!l)
 // 		return (0);
 
-// 	char *tab[] = {"j'adore ", "les ", "listes ", "chainees", "yehhh!"};
+// 	char *tab[] = {""};
 // 	int i = 0;
 
 // 	t_list	*head = l ;
-// 	while (i < 5)
+// 	while (i < 1)
 // 	{			
 // 		l->content = tab[i];
 // 		printf("%s\n", (char *)(l->content));

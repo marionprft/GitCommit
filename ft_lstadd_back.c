@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: mapointi <marion.pointier-fourcart@lear    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 19:10:48 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/18 19:26:17 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/23 15:57:35 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,14 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*p;
 
-	p = *lst;
-	if (lst == NULL)
+	if (!lst || !new)
 		return ;
+	if (*lst == NULL)
+	{
+		*lst = new;
+		return ;
+	}
+	p = *lst;
 	while (p->next != NULL)
 	{
 		p = p->next;

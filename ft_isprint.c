@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapointi <mapointi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mapointi <marion.pointier-fourcart@lear    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 17:19:26 by mapointi          #+#    #+#             */
-/*   Updated: 2026/04/21 17:28:20 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/23 11:57:56 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_isprint(int c)
 
 /*#include <stdio.h>
 
-int main(void)
+int	main(void)
 {
 	printf("%d\n", ft_isprint('f'));
 	printf("%d\n", ft_isprint(127));

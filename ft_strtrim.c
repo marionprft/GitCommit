@@ -3,17 +3,56 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: mapointi <marion.pointier-fourcart@lear    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 18:21:28 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/22 18:37:29 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/23 13:28:41 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+size_t	is_start(char const *s1, char const *set)
+{
+	size_t	start;
+	size_t	j;
 
+	start = 0;
+	if (!s1 || !set)
+		return (0);
+	while (start < ft_strlen(s1))
+	{
+		j = 0;
+		while (s1[start] != set[j] && set[j] != 0)
+			j++;
+		if (set[j] == 0)
+			break ;
+		start++;
+	}
+	return (start);
+}
 
+size_t	is_end(char const *s1, char const *set)
+{
+	size_t	end;
+	size_t	j;
+
+	end = ft_strlen(s1) - 1;
+	if (!s1 || !set)
+		return (0);
+	while (end >= 0)
+	{
+		j = 0;
+		while (s1[end] != set[j] && set[j] != 0)
+			j++;
+		if (set[j] == 0)
+			break ;
+		if (end == 0)
+			break ;
+		end--;
+	}
+	return (end);
+}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -24,37 +63,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1 || !set)
 		return (NULL);
+	start = is_start(s1, set);
+	end = is_end(s1, set);
 	if (s1[0] == '\0')
 		return (ft_strdup(""));
-	start = 0;
-	end = ft_strlen(s1);
-	while (start < end)
-	{
-		i = 0;
-		while (set[i] != '\0')
-		{
-			if (s1[start] == set[i])
-				break ;
-			i++;
-		}
-		if (set[i] == '\0')
-			break ;
-		start++;
-	}
-	while (end > start)
-	{
-		end--;
-		i = 0;
-		while (set[i] != '\0')
-		{
-			if (s1[end] == set[i])
-				break ;
-			i++;
-		}
-		if (set[i] == '\0')
-			break ;
-	}
-	if (start == end)
+	if (start >= end)
 		return (ft_strdup(""));
 	s = (char *)malloc(sizeof(char) * (end - start + 1));
 	if (!s)

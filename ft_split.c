@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: mapointi <marion.pointier-fourcart@lear    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 18:21:28 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/18 19:34:31 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/23 14:56:43 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,37 +38,37 @@ char	**ft_split(const char *s, char c)
 	end = 0;
 	start = 0;
 	k = 0;
-	tab = (char **)malloc(sizeof(char *) * (nb_c(s, c) + 1));
+	tab = (char **)malloc(sizeof(char *) * (nb_c(s, c) + 2));
 	if (!tab)
 		return (NULL);
 	while (s[end])
 	{
-		if (s[end] == c || s[end + 1] == 0)
-		{
-			tab[k] = ft_substr(s, start, end - start + (s[end + 1] == 0));
-			while (s[end] == c && s[end] != 0)
-				end++;
-			start = end++;
-			k++;
-		}
-		else
+		while (s[end] == c)
 			end++;
+		start = end;
+		while (s[end] && s[end] != c)
+			end++;
+		if (end > start)
+			tab[k++] = ft_substr(s, start, end - start);
 	}
+	tab[k] = NULL;
 	return (tab);
 }
-/*
- int main(void)
- {
-		char    s[] = "ccc";
-		char    c = 'c';
-		int     i = 0;
-		char **tab = ft_split(s, c);
 
-		(void)tab;
-		while (tab[i])
-		{
-			printf("%s\n", tab[i]);
-			i++;
-		}
- }
-*/
+// int	main(void)
+// {
+// 	char	s[] = "   hello   world   ";
+// 	char	c;
+// 	int		i;
+// 	char	**tab;
+
+// 	c = ' ';
+// 	i = 0;
+// 	tab = ft_split(s, c);
+// 	(void)tab;
+// 	while (tab[i])
+// 	{
+// 		printf("%s\n", tab[i]);
+// 		i++;
+// 	}
+// }

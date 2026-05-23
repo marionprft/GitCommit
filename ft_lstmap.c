@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapointi <mapointi@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: mapointi <marion.pointier-fourcart@lear    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 18:33:36 by mapointi          #+#    #+#             */
-/*   Updated: 2026/05/18 19:26:59 by mapointi         ###   ########.fr       */
+/*   Updated: 2026/05/23 16:09:39 by mapointi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,12 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst != 0)
 	{
 		newnode->next = ft_lstnew(f(lst->content));
+		if (newnode->next == NULL)
+			ft_lstclear(&lst_head, del);
 		lst = lst->next;
 		newnode = newnode->next;
 	}
 	newnode->next = 0;
-	ft_lstclear(&lst_head, del);
 	return (head);
 }
 /*
